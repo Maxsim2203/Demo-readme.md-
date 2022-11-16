@@ -1,6 +1,6 @@
 Коды и полезные функции
 
-## Пример MaterialDesign
+##  MaterialDesign
 
 ```xml
 <Grid>
@@ -47,7 +47,7 @@
 ```
 
 
-## Page в WPF
+## Page  WPF
 
 ```csharp
 using System;
@@ -142,6 +142,7 @@ private User _currentUser = new User();
 ```SQL
 CONSTRAINT [FK_Abiturients_Specialty] FOREIGN KEY ([specialty_id]) REFERENCES [dbo].[Specialty] ([Id])
 ```
+
 ## Автоинкремент в SQL Server 
 
 ```SQL
