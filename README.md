@@ -108,16 +108,21 @@ MessageBox.Show("Ошибка!");
 }
 
 В событие Click кнопки button1 добавим метод для генерации новой капчи:
+
 '''
+
 private void button1_Click(object sender, EventArgs e)
 {
 pictureBox1.Image = this.CreateImage(pictureBox1.Width, pictureBox1.Height);
 }
+
 '''
+
 
 В событие Click кнопки button2 добавим метод выполняющий проверку введенного текста и сгенерированного:
 
 '''
+
 private void button2_Click(object sender, EventArgs e)
 {
 if (textBox1.Text == this.text)
