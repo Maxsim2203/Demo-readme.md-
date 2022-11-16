@@ -557,8 +557,10 @@ MessageBox.Show("Ошибка!");
 В событие Form1_Load, запуск которого происходит при загрузке проекта, так же добавим генерацию капчи.
 
 ```
+
 private void Form1_Load(object sender, EventArgs e)
 {
 pictureBox1.Image = this.CreateImage(pictureBox1.Width, pictureBox1.Height);
 }
+
 ```
