@@ -1,6 +1,12 @@
 # Demo-readme.md-
 Описание  кодов и функций для демо экзамена
+
+
+
 Entity Framework Core 6. Cвязь моделей 1 : M
+
+
+'''
 Model User
 using System;
 using System.Collections.Generic;
@@ -51,7 +57,9 @@ App.xaml
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
-    </Application.Resources>								  
+    </Application.Resources>	
+	
+	
 Подключение
 xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         
