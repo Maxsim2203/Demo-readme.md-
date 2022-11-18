@@ -421,7 +421,7 @@ using(ColledgeStoreContext db = new ColledgeStoreContext())
    ## Капча WinForms
    
 
-```
+```Csharp
 
 private Bitmap CreateImage(int Width, int Height)
 {
@@ -536,7 +536,7 @@ MessageBox.Show("Ошибка!");
 
   #В событие Click кнопки button1 добавим метод для генерации новой капчи:
   
- ``` 
+ ```Csharp
 
 private void button1_Click(object sender, EventArgs e)
 {
@@ -546,7 +546,7 @@ pictureBox1.Image = this.CreateImage(pictureBox1.Width, pictureBox1.Height);
     
   В событие Click кнопки button2 добавим метод выполняющий проверку введенного текста и сгенерированного:
   
- ```
+ ```Csharp
 
 private void button2_Click(object sender, EventArgs e)
 {
@@ -561,7 +561,7 @@ MessageBox.Show("Ошибка!");
   В событие Form1_Load, запуск которого происходит при загрузке проекта, так же добавим генерацию капчи:
   
   
- ``` 
+ ```Csharp 
    
 private void Form1_Load(object sender, EventArgs e)
 {
