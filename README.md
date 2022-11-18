@@ -510,12 +510,14 @@ result.SetPixel(i, j, Color.White);
 
 return result;
 }
-В событие Click кнопки button1 добавим метод для генерации новой капчи:
+В событие Click кнопки button1 добавим метод для
+новой капчи:
 
 private void button1_Click(object sender, EventArgs e)
 {
 pictureBox1.Image = this.CreateImage(pictureBox1.Width, pictureBox1.Height);
 }
+
 ```
 
  ##В событие Click кнопки button2 добавим метод выполняющий проверку введенного текста и сгенерированного:
@@ -532,18 +534,19 @@ MessageBox.Show("Ошибка!");
 
  ```
 
-  В событие Click кнопки button1 добавим метод для генерации новой капчи:
-
-    ```
+  #В событие Click кнопки button1 добавим метод для генерации новой капчи:
+  
+ ``` 
 
 private void button1_Click(object sender, EventArgs e)
 {
 pictureBox1.Image = this.CreateImage(pictureBox1.Width, pictureBox1.Height);
 }
-    ```
+ ```
     
   В событие Click кнопки button2 добавим метод выполняющий проверку введенного текста и сгенерированного:
-    ```
+  
+ ```
 
 private void button2_Click(object sender, EventArgs e)
 {
@@ -553,15 +556,16 @@ else
 MessageBox.Show("Ошибка!");
 }
 
-   ``` 
+ ``` 
 
-В событие Form1_Load, запуск которого происходит при загрузке проекта, так же добавим генерацию капчи.
-
-```
-
+  В событие Form1_Load, запуск которого происходит при загрузке проекта, так же добавим генерацию капчи:
+  
+  
+ ``` 
+   
 private void Form1_Load(object sender, EventArgs e)
 {
 pictureBox1.Image = this.CreateImage(pictureBox1.Width, pictureBox1.Height);
 }
-
+   
 ```
