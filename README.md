@@ -569,3 +569,57 @@ pictureBox1.Image = this.CreateImage(pictureBox1.Width, pictureBox1.Height);
 }
    
 ```
+
+
+Добавление изображения
+
+```
+private void AddImageToProduct(object sender, RoutedEventArgs e)
+    {
+        Stream myStream;
+        Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
+        if(dlg.ShowDialog() == true)
+        {
+            if ( (myStream = dlg.OpenFile()) != null )
+            {
+                string strfilename = dlg.FileName;
+                string filetext = File.ReadAllText(strfilename);
+
+                dlg.DefaultExt = ".png";
+                dlg.Filter = "JPEG Files (*.jpeg)|*.jpeg|PNG Files (*.png)|*.png|JPG Files (*.jpg)|*.jpg|GIF Files (*.gif)|*.gif";
+                dlg.Title = "Open Image";
+                dlg.InitialDirectory = "./";
+                
+                BitmapImage image = new BitmapImage(new Uri(dlg.FileName));
+                ImageBox.Source = image;
+
+                try
+                {
+                        string newRelativePath = $"{System.DateTime.Now.ToString("HHmmss")}_{dlg.SafeFileName}";
+                        File.Copy(dlg.FileName, System.IO.Path.Combine(Environment.CurrentDirectory, $"images/{newRelativePath}"));
+                        ImagePath = newRelativePath;
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }       
+            myStream.Dispose();
+            
+        }
+    }
+    
+ ```
+ 
+ Миграции  
+Nuget-пакет:
+Microsoft.EntityFrameworkCore.Design Microsoft.EntityFrameworkCore.Tools
+
+Обновление пакета инструментов в консоле:
+dotnet tool update --global dotnet-ef
+
+Создание миграции:
+dotnet ef migrations add Itinial
+
+Применение миграции:
+dotnet ef database update
