@@ -612,14 +612,30 @@ private void AddImageToProduct(object sender, RoutedEventArgs e)
  ```
  
  Миграции  
+ ```Csharp 
 Nuget-пакет:
+
 Microsoft.EntityFrameworkCore.Design Microsoft.EntityFrameworkCore.Tools
 
+```Csharp 
+
 Обновление пакета инструментов в консоле:
+
+```Csharp 
 dotnet tool update --global dotnet-ef
 
+```
+
 Создание миграции:
+```Csharp 
+
 dotnet ef migrations add Itinial
 
+```Csharp 
+
 Применение миграции:
+
+```Csharp 
 dotnet ef database update
+
+```
